@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+        </header>
+        <nav>
+        </nav>
+        <section>
+            <form method="post" action="{% url 'review-list' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add Review</button>
+            </form>
+        </section>
+        <footer>
+        </footer>
+    </body>
+</html>
